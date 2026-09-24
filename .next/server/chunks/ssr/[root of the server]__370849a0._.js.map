@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 15, "column": 0}, "map": {"version":3,"sources":["file://D%3A/Startup/components/layout/providers.tsx"],"sourcesContent":["'use client';\n\n// components/layout/providers.tsx — TanStack Query & Application Shell Providers\nimport React, { useState } from 'react';\nimport { QueryClient, QueryClientProvider } from '@tanstack/react-query';\n\nexport function Providers({ children }: { children: React.ReactNode }) {\n  const [queryClient] = useState(\n    () =>\n      new QueryClient({\n        defaultOptions: {\n          queries: {\n            staleTime: 60 * 1000,\n            refetchOnWindowFocus: false,\n          },\n        },\n      })\n  );\n\n  return <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>;\n}\n"],"names":[],"mappings":";;;;AAEA,iFAAiF;AACjF;AACA;AAAA;AAJA;;;;AAMO,SAAS,UAAU,EAAE,QAAQ,EAAiC;IACnE,MAAM,CAAC,YAAY,GAAG,CAAA,GAAA,qMAAA,CAAA,WAAQ,AAAD,EAC3B,IACE,IAAI,6KAAA,CAAA,cAAW,CAAC;YACd,gBAAgB;gBACd,SAAS;oBACP,WAAW,KAAK;oBAChB,sBAAsB;gBACxB;YACF;QACF;IAGJ,qBAAO,8OAAC,sLAAA,CAAA,sBAAmB;QAAC,QAAQ;kBAAc;;;;;;AACpD","debugId":null}},
+    {"offset": {"line": 45, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}}]
+}

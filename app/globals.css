@@ -1,0 +1,96 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    /* Troly Master Spec v1.0 Color Tokens */
+    --primary: #4f46e5;          /* Indigo 600 */
+    --primary-hover: #4338ca;    /* Indigo 700 */
+    --primary-foreground: #ffffff;
+
+    --success: #059669;          /* Emerald 600 */
+    --success-bg: #ecfdf5;       /* Emerald 50 */
+    --success-border: #a7f3d0;   /* Emerald 200 */
+
+    --warning: #d97706;          /* Amber 600 */
+    --warning-bg: #fffbeb;       /* Amber 50 */
+    --warning-border: #fde68a;   /* Amber 200 */
+
+    --error: #e11d48;            /* Rose 600 */
+    --error-bg: #fff1f2;         /* Rose 50 */
+    --error-border: #fecdd3;     /* Rose 200 */
+
+    --info: #0284c7;             /* Sky 600 */
+    --info-bg: #f0f9ff;          /* Sky 50 */
+    --info-border: #bae6fd;      /* Sky 200 */
+
+    /* Neutral Scale 50–900 Grayscale */
+    --slate-50: #f8fafc;
+    --slate-100: #f1f5f9;
+    --slate-200: #e2e8f0;
+    --slate-300: #cbd5e1;
+    --slate-400: #94a3b8;
+    --slate-500: #64748b;
+    --slate-600: #475569;
+    --slate-700: #334155;
+    --slate-800: #1e293b;
+    --slate-900: #0f172a;
+
+    /* Border Radius Standards */
+    --radius-card: 12px;
+    --radius-button: 10px;
+    --radius-modal: 16px;
+    --radius-input: 10px;
+  }
+
+  * {
+    border-color: var(--slate-200);
+    box-sizing: border-box;
+  }
+
+  body {
+    background-color: var(--slate-50);
+    color: var(--slate-900);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Strict Tabular Numbers for Data Density */
+  .tabular-nums {
+    font-feature-settings: "tnum" 1, "cv02" 1, "cv03" 1, "cv04" 1, "cv11" 1;
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Master Elevation Levels (Only 3 Levels Allowed) */
+.elevation-0 {
+  border: 0;
+  box-shadow: none;
+}
+
+.elevation-1 {
+  border: 1px solid var(--slate-200);
+  box-shadow: none;
+}
+
+.elevation-2 {
+  border: 1px solid var(--slate-200);
+  box-shadow: 0 1px 3px 0 rgba(15, 23, 42, 0.05), 0 1px 2px -1px rgba(15, 23, 42, 0.05);
+}
+
+/* Component Radii Classes */
+.rounded-card {
+  border-radius: var(--radius-card);
+}
+
+.rounded-btn {
+  border-radius: var(--radius-button);
+}
+
+.rounded-modal {
+  border-radius: var(--radius-modal);
+}
+
+.rounded-input {
+  border-radius: var(--radius-input);
+}
