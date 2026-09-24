@@ -1,5 +1,0 @@
-{
-  "/(dashboard)/page": "app/(dashboard)/page.js",
-  "/manifest.webmanifest/route": "app/manifest.webmanifest/route.js",
-  "/_not-found/page": "app/_not-found/page.js"
-}
